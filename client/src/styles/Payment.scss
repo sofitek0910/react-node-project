@@ -1,0 +1,136 @@
+.total-payment {
+    width: 100%;
+    margin: 2rem 0;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.payment-container {
+    width: 100%;
+    height: auto;
+}
+
+.payment-methods,
+.payment-details {
+    width: 100%; 
+    max-width: 700px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem auto 0;
+
+    button {
+        margin: 1rem 0;
+    }
+
+    @media screen and (min-width: 550px) {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 2rem;
+
+        button {
+            margin: 0;
+        }
+    }
+}
+
+.credit-card-container {
+    width: 100%; 
+    max-width: 620px;
+    height: auto;
+    display: grid;
+    grid: repeat(3, 1fr) / repeat(3, 1fr);
+    grid-gap: 2rem;
+    margin-top: 2rem;
+
+    input {
+        width: 100%;
+        padding: 0.5rem;
+    }
+
+    label {
+        position: relative;
+
+        &::after {
+            content: '';  
+            position: absolute;
+            top: -1rem;
+            left: 0;
+            font-size: 0.9rem;
+            color: grey;
+        }
+    }
+
+    .cardholder {
+        grid-area: 1/1/2/-1;
+
+        &::after {
+            content: 'CARDHOLDER';
+        }
+    }
+
+    .cardnumber {
+        grid-area: 2/1/3/-1;
+
+        &::after {
+            content: 'CARDNUMBER';
+        }
+    }
+
+    .month::after {
+        content: 'MONTH';
+    }
+
+    .year::after {
+        content: 'YEAR';
+    }
+
+    .cvv::after {
+        content: 'CVV';
+    }
+}
+
+.payment-btn {
+    grid-area: 5/2/-1/3;
+    position: relative;
+    top: 1rem;
+        font-size: 1rem !important;
+
+    &:active {
+        position: relative;
+        top: calc(1rem + 2px) !important;
+    }
+}
+
+.payment-option-container {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1rem auto;
+
+    h5 {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+        padding: 0 0.5rem;
+        text-align: center;
+    }
+
+    p {
+        line-height: 1.5;
+        margin: 0.5rem 0;
+        padding: 0 0.5rem;
+        text-align: justify;
+    }
+
+    input {
+        width: 10rem;
+        margin: 1rem auto 0;
+    }
+}

@@ -1,0 +1,28 @@
+.minicart {
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    top: 9rem;
+    transform: translateX(-50%);
+    z-index: 200;
+
+    p {
+        min-width: 10rem;
+    }
+
+    button {
+        margin-left: 0.5rem;
+        min-width: 6.5rem;
+        padding: 0.5rem;
+    }
+
+    @media screen and(min-width: 890px){
+        left: 60%;
+        right: 1rem;
+        top: 2rem;
+        transform: translateX(0);
+    }
+}

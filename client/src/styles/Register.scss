@@ -1,0 +1,159 @@
+.info-title {
+    margin: 2rem 0 0.5rem;
+}
+
+form {
+    width: 100%;
+    height: auto;
+    padding: 1rem 1rem 2rem;
+    margin: 1rem 0;
+
+    @media screen and (min-width: 470px) {
+        grid-gap: 2rem;
+    }
+
+    input {
+        width: 100%;
+        height: 100%;
+        border: none;
+        border-bottom: 1px solid rgb(145, 145, 145);
+        padding: 0.3rem;
+        font-size: 1rem;
+        background-color: transparent;
+
+        @media screen and (min-width: 470px) {
+                font-size: 1.1rem;
+        }
+
+        &::placeholder {
+            color: rgba(90, 90, 90, 0.5);
+            font-family: 'Josefin Sans', sans-serif;
+            text-transform: uppercase;
+
+            @media screen and (min-width: 470px) {
+                font-size: 1.1rem;
+            }
+        }
+    }
+
+    label {
+        position: relative;
+
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: -22px;
+            left: 5px;
+            color: rgb(145, 145, 145);
+        }
+    }
+}
+
+.data-container {
+
+    display: grid;
+    grid-template: repeat(6, 1fr) / repeat(4, 1fr);
+    grid-gap: 2rem 1rem;
+    padding: 1rem 1rem 2rem;
+    margin: 1rem 0;
+
+    .first-name {
+        grid-area: 1/1/2/3;
+
+        &:after {
+            content: 'NAME';
+        }
+    }
+
+    .second-name {
+        grid-area: 1/3/2/5;
+
+        &:after {
+            content: 'SURNAME';
+        }  
+    }
+
+    .address {
+        grid-area: 2/1/3/3;
+
+        &:after {
+            content: 'ADDRESS';
+        }  
+    }
+
+    .address-nr {
+        grid-area: 2/3/3/4;
+
+        &:after {
+            content: 'NR.';
+        }  
+    }
+
+    .address-post {
+        grid-area: 2/4/3/5;
+
+        &:after {
+            content: 'ZIP';
+        }  
+    }
+
+    .city {
+        grid-area: 3/1/4/3;
+
+        &:after {
+            content: 'CITY';
+        }  
+    }
+
+    .country {
+        grid-area: 3/3/4/5;
+
+        &:after {
+            content: 'COUNTRY';
+        }  
+    }
+
+    .email {
+        grid-area: 4/1/5/-1;
+
+        &:after {
+            content: 'EMAIL';
+        }  
+    }
+
+    .username {
+        grid-area: 5/1/6/3;
+        font-weight: 600;
+        margin: 0.5rem 0;
+
+        &:after {
+            content: 'USERNAME';
+        }  
+    }
+
+    .userpassword {
+        grid-area: 5/3/6/5;
+        font-weight: 600;
+        margin: 0.5rem 0;
+
+        &:after {
+            content: 'PASSWORD';
+        }  
+    }
+
+    .register-btn {
+        grid-area: 6/2/-1/4;
+        
+        #register-btn {
+            position: relative;
+            top: 2rem;
+
+            &:active {
+                position: relative;
+                top: calc(2rem + 2px);
+                box-shadow: none;
+                background-color: rgb(160, 45, 0);
+            }
+        }
+    }
+}

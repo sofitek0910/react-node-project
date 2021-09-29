@@ -1,0 +1,35 @@
+.sunglasses-bk {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(238, 216, 164);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    font-family: 'Josefin Sans', sans-serif;
+    padding-top: 3rem;
+
+    @media screen and(min-width: 890px){
+        padding-top: 0;
+    }
+}
+
+.logo-blue {
+    color: rgb(7, 104, 104);
+}
+
+.section-sunglasses {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 20vh;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(270px, 1fr) );
+    grid-gap: 2rem;
+    background-color: rgb(238, 216, 164);
+
+    @media screen and (min-width: 920px) {
+        padding: 1rem 10rem 5rem;
+    }
+}
